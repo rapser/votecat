@@ -1,0 +1,34 @@
+//
+//  votacion
+//
+//  Created by miguel tomairo on 25/06/22.
+//
+
+import Foundation
+import UIKit
+
+extension UILabel {
+    static func textLabel(size: CGFloat, textColor: UIColor = .white, numberOfLines: Int = 1) -> UILabel {
+        let label = UILabel()
+        label.font = UIFont(name: "Helvetica Neue Medium Extended", size: size)
+        label.textColor = textColor
+        label.numberOfLines = numberOfLines
+        return label
+    }
+    
+    static func textBoldLabel(size: CGFloat, textColor: UIColor = .white, numberOfLines: Int = 1) -> UILabel {
+        let label = UILabel()
+        label.font = UIFont(name: "Helvetica Neue Medium Extended", size: size)
+        label.textColor = textColor
+        label.numberOfLines = numberOfLines
+        return label
+    }
+    
+    func addShadow() {
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowRadius = 2
+        self.layer.shadowOpacity = 0.8
+        self.layer.shadowOffset = CGSize(width: 1, height: 1)
+        self.layer.masksToBounds = false
+    }
+}
